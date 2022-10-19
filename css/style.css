@@ -8,6 +8,10 @@
     color: #E94560;
     background-color: #16213E;
 } */
+@font-face {
+    font-family: 'Camar';
+    src: url(fonts/Camar.ttf);
+}
 
 body{
     margin: 0;
@@ -25,8 +29,13 @@ section{
     padding: 100px 20vw;
 }
 
-id.border2{
-    visibility: hidden;
+.flip{
+    transform: rotate(180deg);
+}
+
+h3{
+    font-family: 'Camar', sans-serif;
+    font-size: 5em;
 }
 
 /* svg part*/
@@ -76,26 +85,3 @@ id.border2{
 .wave .shape-fill {
     fill: #16213E;
 }
-
-/* divider wave 2 */
-.wave2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.wave2 svg {
-    position: relative;
-    display: block;
-    width: calc(206% + 1.3px);
-    height: 55px;
-    transform: rotateY(180deg);
-}
-
-.wave2 .shape-fill {
-    fill: #16213E;
-}
-
