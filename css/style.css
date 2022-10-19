@@ -1,17 +1,4 @@
-/* body, html{
-    height: 100;
-    margin: 0;
-    font-size: 16px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 400;
-    line-height: 1.8em;
-    color: #E94560;
-    background-color: #16213E;
-} */
-@font-face {
-    font-family: 'Camar';
-    src: url(fonts/Camar.ttf);
-}
+
 
 body{
     margin: 0;
@@ -29,18 +16,35 @@ section{
     padding: 100px 20vw;
 }
 
-.flip{
-    transform: rotate(180deg);
+@font-face {
+    font-family: 'Camar';
+    src: url(fonts/Camar.ttf);
+}
+
+
+.front-face{
+    width: 30%;
+    height: 30%;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 h3{
     font-family: 'Camar', sans-serif;
     font-size: 5em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* svg part*/
+/* section temporary bgs*/
+.blue{
+    background: #0656D3;
+}
 
-.spacer{
+/* waves css */
+.spacer {
     aspect-ratio: 960/300;
     width: 100%;
     background-repeat: no-repeat;
@@ -48,40 +52,6 @@ h3{
     background-size: cover;
 }
 
-.layer1{
-    background-image: url('/assets/verynicecurves2.svg');
-}
-
-/* section temporary bgs*/
-.blue{
-    background: blue;
-}
-.red{
-    background: red;
-}
-.yellow{
-    background:yellow;
-}
-
-/* waves css */
-.wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.wave svg {
-    position: relative;
-    display: block;
-    width: calc(185% + 1.3px);
-    height: 100px;
-    transform: rotateY(180deg);
-}
-
-.wave .shape-fill {
-    fill: #16213E;
+.layer1 {
+    background-image: url('./assets/wave3.svg');
 }
