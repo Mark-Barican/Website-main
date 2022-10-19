@@ -33,11 +33,6 @@ section{
     background-size: contain;
     background-repeat: no-repeat;
 }
-/* 
-.blob-motion{
-    position: absolute;
-    transform: translateY(20vh);
-} */
 
 h3{
     font-family: 'Camar', sans-serif;
