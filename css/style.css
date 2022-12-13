@@ -1,13 +1,3 @@
-/* body, html{
-    height: 100;
-    margin: 0;
-    font-size: 16px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 400;
-    line-height: 1.8em;
-    color: #E94560;
-    background-color: #16213E;
-} */
 @font-face {
     font-family: 'Camar';
     src: url(fonts/Camar.ttf);
@@ -18,6 +8,10 @@ body{
     font-family: 'IBM Plex Sans', sans-serif;
     color: white;
     background: #16213E;
+    overflow: hidden;
+    background-image:url('/assets/849790.gif');
+    background-repeat:repeat;
+    position:relative;
 }
 
 section{
@@ -28,7 +22,10 @@ section{
     min-height: 400px;
     padding: 100px 20vw;
 }
-
+.whole{
+  z-index: 100;
+  top: 100px;
+}
 .flip{
     transform: rotate(180deg);
 }
@@ -36,6 +33,115 @@ section{
 h3{
     font-family: 'Camar', sans-serif;
     font-size: 5em;
+    padding: 2vh 2vw;
+    text-align: center;
+    border-style: solid;
+    cursor: none;
+}
+
+p{
+    font-family: 'ubuntu', sans-serif;
+    font-size: 9px;
+    font-weight: 50;
+}
+
+.links{
+  color: white;
+}
+
+.links-pos{
+  z-index: 9;
+  position: absolute;
+  top: 100px;
+  padding-right: 25px;
+}
+
+
+/* button css*/
+
+.button-85 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    bottom: 50px;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transition: 0.3s;
+  }
+
+  .button-85:hover{
+    background-color: transparent;
+    color: aqua;
+    cursor: none;
+  }
+
+  .button-85:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #33E9FF,
+      #33D1FF,
+      #3393FF,
+      #335BFF,
+      #3C33FF,
+      #335BFF,
+      #3393FF,
+      #33D1FF,
+      #33E9FF
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+
+  @keyframes glowing-button-85 {
+    0% { 
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  .button-85:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+  li{
+    display:inline-block;
+    margin-right:7px;
+    color: white;
+  }
+/* hover and links*/
+
+a:link{
+    text-decoration: none;
 }
 
 /* svg part*/
@@ -52,26 +158,16 @@ h3{
     background-image: url('/assets/verynicecurves2.svg');
 }
 
-/* section temporary bgs*/
-.blue{
-    background: blue;
-}
-.red{
-    background: red;
-}
-.yellow{
-    background:yellow;
-}
-
 /* waves css */
 .wave {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: 515px;
     width: 100%;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
+    z-index: 10;
+
 }
 
 .wave svg {
@@ -83,5 +179,5 @@ h3{
 }
 
 .wave .shape-fill {
-    fill: #16213E;
+    fill: #5a76c4;
 }
