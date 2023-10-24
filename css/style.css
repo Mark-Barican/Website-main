@@ -3,15 +3,14 @@
     src: url(fonts/Camar.ttf);
 }
 
-body{
-    margin: 0;
-    font-family: 'IBM Plex Sans', sans-serif;
-    color: white;
-    background: #16213E;
-    overflow: hidden;
-    background-image:url('/assets/849790.gif');
-    background-repeat:repeat;
-    position:relative;
+body {
+  margin: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: white;
+  background: url('/assets/849790.gif') no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden; /* Hide scrollbars */
+  position: relative;
 }
 
 section{
@@ -225,4 +224,86 @@ a:link{
   overflow:auto;
   z-index: 10;
 }
+/* ----------------------------------------- */
+.movable-div {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50px; /* Initial left position */
+  top: 50px;  /* Initial top position */
+  cursor: move;
+}
 
+.movable-div p {
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
+
+.movable-div img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+/* ----------------------------------------- */
+.movable-div-2 {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50px; /* Initial left position */
+  top: 50px;  /* Initial top position */
+  cursor: move;
+}
+
+.movable-div-2 p {
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
+
+.movable-div-2 img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+/* ----------------------------------------- */
+.hobbies-div {
+  width: 200px;
+  position: absolute;
+  left: 1250px; /* Adjust the position as needed */
+  top: 50px;  /* Adjust the position as needed */
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 100px; /* Adjust the size as needed */
+  height: 100px; /* Adjust the size as needed */
+}
+
+/* ----------------------------------------- */
+
+.favorites-div {
+  width: 200px;
+    position: absolute;
+    left: 662px;
+    top: 360px;
+    text-align: center;
+}
+
+.favorites-div h2 {
+  color: white;
+    font-size: 18px;
+}
+
+.favorites-div img {
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
