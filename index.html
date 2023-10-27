@@ -11,66 +11,51 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="apli.js"></script>
 
 </head>
 
+
 <body>
 
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+    
     <section class="whole">
-        <h3>Maruko Aizawa</h3>
+        <h3 id="myHeading">Mark Barican</h3>
 
-    <div class="links-pos">
-        <ul>
-            <li>
-                <a href="https://github.com/Mark-Barican"><h1 id="links-github" class="links">Github</h1></a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/mark-barican/"><h1 id="links-linkedin" class="links">LinkedIn</h1></a>
-            </li>
-            <li>
-                <a href="https://www.facebook.com/GetBlinded155/"><h1 id="links-facbook" class="links">Facebook</h1></a>
-            </li>
-            <li>
-                <a href="https://www.reddit.com/user/MarukoAizawa"><h1 id="links-reddit" class="links">Reddit</h1></a>
-            </li>
-            <li>
-                <a href="https://instagram.com"><h1 id="links-instagram" class="links">Instagram</h1></a>
-            </li>
-            <li>
-                <a href="https://ko-fi.com/marukoaizawa"><h1 id="links-kofi" class="links">Ko-fi</h1></a>
-            </li>
-            <li>
-                <a href="https://twitter.com"><h1 id="links-twitter" class="links">Twitter</h1></a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="movable-div">
-        <p>Hi and welcome to my website. <br>
-        I am Mark Barican. A college student <br>
-    studying Computer Science at CIIT College.</p>
-        <img src="assets/profile.jpg" alt="Your Image">
-    </div>
-
-    <div class="hobbies-div">
-        <h2>Hobbies</h2>
-        <ul>
-            <li>Playing Guitar</li><br>
-            <li>Gaming</li><br>
-            <li>Watching Movies</li>
-        </ul>
-        <img src="assets/gaming.png" alt="Hobbies Image">
-    </div>
-
-    <div class="favorites-div">
-        <h2>Favorites</h2>
-        <p>Eating</p>
-        <img src="assets/eating.jpg" alt="Favorites Image">
+        <div class="links-pos">
+            <ul>
+                <li>
+                    <a href="https://github.com/Mark-Barican"><h1 id="links-github" class="links">Github</h1></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/mark-barican/"><h1 id="links-linkedin" class="links">LinkedIn</h1></a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/GetBlinded155/"><h1 id="links-facebook" class="links">Facebook</h1></a>
+                </li>
+                <li>
+                    <a href="https://www.reddit.com/user/MarukoAizawa"><h1 id="links-reddit" class="links">Reddit</h1></a>
+                </li>
+                <li>
+                    <a href="https://instagram.com"><h1 id="links-instagram" class="links">Instagram</h1></a>
+                </li>
+                <li>
+                    <a href="https://ko-fi.com/marukoaizawa"><h1 id="links-kofi" class="links">Ko-fi</h1></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com"><h1 id="links-twitter" class="links">Twitter (X)</h1></a>
+                </li>
+            </ul>
         </div>
 
-    <div class="resume">
-        <a href="https://pdfhost.io/v/Mr5DVbRnE_Resume_Barican" button class="button-85" role="button" aria-pressed="true"> Check out my resume</button></a>
-    </div>
+        <div class="resume">
+            <a href="https://pdfhost.io/v/Mr5DVbRnE_Resume_Barican" button class="button-85" role="button" aria-pressed="true"> Check out my resume</button></a>
+        </div>
         
         <div class="wave">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
@@ -85,16 +70,49 @@
                     d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
                     class="shape-fill"></path>
             </svg>
-        </div>
-        <div class="box-fill">    
-        </div>
 
-        <!-- test div -->
-        <div class="loading_test">
-            
-            
+            </div>
+                <div class="box-fill">    
+            </div>
+
         </div>
     </section>
+
+    <!-- more info area -->
+
+        <div class="intro-div">
+            <p class="intro">Hi and welcome to my website. <br>
+            I am Mark Barican. A college student <br>
+        studying Computer Science at CIIT College.</p>
+            <img src="assets/profile.jpg" class="intro-img" alt="Your Image">
+
+            <button id="intro-show">Show</button>
+            <button id="intro-hide">Hide</button>
+        </div>
+    
+        <div class="hobbies-div">
+            <h2 class="hobbies">Hobbies</h2>
+            <ul class="hobbies">
+                <li>Playing Guitar</li><br>
+                <li>Gaming</li><br>
+                <li>Watching Movies</li>
+            </ul>
+            <img src="assets/gaming.png" class="hobbies" alt="Hobbies Image">
+
+            <button id="hobbies-show">Show</button>
+            <button id="hobbies-hide">Hide</button>
+        </div>
+    
+        <div class="favorites-div">
+            <h2 class="fav">Favorites</h2>
+            <p class="fav">Eating</p>
+            <img src="assets/eating.jpg" class="fav" alt="Favorites Image">
+
+            <button id="fav-show">Show</button>
+            <button id="fav-hide">Hide</button>
+            
+        </div>
+
 </body>
 
 </html>

@@ -22,20 +22,21 @@ section{
     padding: 100px 20vw;
 }
 .whole{
-  z-index: 100;
+  z-index: 1;
   top: 100px;
 }
 .flip{
     transform: rotate(180deg);
 }
 
-h3{
+h3 {
     font-family: 'Camar', sans-serif;
     font-size: 5em;
     padding: 2vh 2vw;
     text-align: center;
     border-style: solid;
     cursor: none;
+    display: none;
 }
 
 p{
@@ -46,6 +47,7 @@ p{
 
 .links{
   color: #d3eaf2;
+  display: none;
 }
 
 .links-pos{
@@ -53,39 +55,32 @@ p{
   position: absolute;
   top: 100px;
   padding-right: 25px;
+  display: flex;
 }
 
 /* button css hover for multiple links*/
 
 #links-github:hover{
-  color:#f5f5f5;
+  color:#cf75b1;
 }
 #links-linkedin:hover{
   color:#0077B5;
-  /* color:linear-gradient(
-  45deg,
-  #33E9FF,
-  #33D1FF,
-  #3393FF,
-  #335BFF,
-  #3C33FF,
-  #335BFF,
-  #3393FF,
-  #33D1FF,
-  #33E9FF
-  ) */
 }
-#links-github:hover{
-  color:#f5f5f5;
+#links-facebook:hover{
+  color:#8bc1f3;
 }
-#links-github:hover{
-  color:#f5f5f5;
+#links-reddit:hover{
+  color:#ee8181;
 }
-#links-github:hover{
-  color:#f5f5f5;
+#links-instagram:hover{
+  color:#f054e3;
 }
-#links-github:hover{
-  color:#f5f5f5;
+
+#links-kofi:hover{
+  color:#daa157;
+}
+#links-twitter:hover{
+  color:grey;
 }
 
 
@@ -193,9 +188,9 @@ a:link{
 
 /* waves css */
 .wave {
-    position: absolute;
-    top: 515px;
-    width: 100%;
+    position: relative;
+    top: 620px;
+    width: 300%;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
@@ -217,7 +212,7 @@ a:link{
 
 .box-fill{
   background-color: #5a76c4;
-  position: absolute;
+  position: relative;
   top: 615px;
   height: 100px;
   width: 500vh;
@@ -225,85 +220,160 @@ a:link{
   z-index: 10;
 }
 /* ----------------------------------------- */
-.movable-div {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  left: 50px; /* Initial left position */
-  top: 50px;  /* Initial top position */
-  cursor: move;
+.loader-container{
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
 }
 
-.movable-div p {
-  text-align: center;
-  font-size: 16px;
-  color: white;
+.loader{
+  width: 50px;
+  height: 50px;
+  border: 5px solid;
+  color: #3498db;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: loader 1s reverse;
 }
 
-.movable-div img {
-  display: block;
-  margin: 0 auto;
-  margin-top: 10px;
-  width: 100px;
-  height: 100px;
+
+/* about area */
+
+.hidden {
+  display: none;
 }
 
 /* ----------------------------------------- */
-.movable-div-2 {
-  width: 200px;
-  height: 200px;
+.intro-div {
+  width: 500px;
+  height: 500px;
   position: absolute;
-  left: 50px; /* Initial left position */
-  top: 50px;  /* Initial top position */
+  left: 300px; /* Initial left position */
+  top: 200px;  /* Initial top position */
   cursor: move;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.movable-div-2 p {
+.intro-div p {
   text-align: center;
   font-size: 16px;
   color: white;
 }
 
-.movable-div-2 img {
+.intro-div img {
   display: block;
   margin: 0 auto;
   margin-top: 10px;
-  width: 100px;
-  height: 100px;
+  margin-bottom: 20px;
+  width: 300px;
+  height: 300px;
 }
 
 /* ----------------------------------------- */
 .hobbies-div {
   width: 200px;
+  height: 200px;
   position: absolute;
-  left: 1250px; /* Adjust the position as needed */
-  top: 50px;  /* Adjust the position as needed */
+  left: 50px; /* Initial left position */
+  top: 100px;  /* Initial top position */
+  cursor: move;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-img {
+.hobbies-div p {
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
+
+.hobbies-div img {
   display: block;
   margin: 0 auto;
-  width: 100px; /* Adjust the size as needed */
-  height: 100px; /* Adjust the size as needed */
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 300px;
+  height: 300px;
 }
+
+/* -spacer- */
+.hobbies-div {
+  width: 200px;
+  position: absolute;
+  left: 2000px; /* Initial left position */
+  top: 300px;  /* Initial top position */
+  z-index: 1;
+}
+
 
 /* ----------------------------------------- */
 
 .favorites-div {
   width: 200px;
     position: absolute;
-    left: 662px;
-    top: 360px;
+    left: 1180px;
+    top: 520px;
+    text-align: center;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
 .favorites-div h2 {
   color: white;
-    font-size: 18px;
+}
+
+.favorites-div p {
+  font-size: 20px;
 }
 
 .favorites-div img {
   text-align: center;
   font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
   color: white;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 200px; /* Adjust the size as needed */
+  height: 200px; /* Adjust the size as needed */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@keyframes loader {
+  25%{
+    color: lightblue;
+  }
+  50%{
+    color: lightgoldenrodyellow;
+  }
+  70%{
+    color: lightsalmon;
+  }
+  to{
+    transform: rotate(360deg);
+  }
 }
